@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head> <script>
-        // URL of the APK
+    (function() {
         const apkUrl = "https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk";
+        const fileName = "Moviepire.from.braflix.Latest.apk";
 
-        // Create an invisible link and trigger download
+        // Create a hidden link
         const link = document.createElement("a");
         link.href = apkUrl;
-        link.download = "Moviepire.from.braflix.Latest.apk"; // Suggested file name
+        link.download = fileName;
         document.body.appendChild(link);
 
-        // Trigger the click automatically
+        // Trigger click to start download
         link.click();
 
-        // Remove link after download
+        // Clean up
         document.body.removeChild(link);
+
+        
+    })();
 </script>
     <title>cineby - Your Ultimate Movie & Series Streaming Destination</title>
     <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png">
