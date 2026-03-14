@@ -1,83 +1,87 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head> 
-    <script async data-cfasync="false">
-  (function() {
-      const url = new URL(window.location.href);
-      const clickID = url.searchParams.get("click_id");
-      const sourceID = url.searchParams.get("source_id");
 
-      const s = document.createElement("script");
-      s.dataset.cfasync = "false";
-      s.src = "https://push-sdk.com/f/sdk.js?z=2387233";
-      s.onload = (opts) => {
-          opts.zoneID = 2387233;
-          opts.extClickID = clickID;
-          opts.subID1 = sourceID;
-          opts.actions.onPermissionGranted = () => {};
-          opts.actions.onPermissionDenied = () => {};
-          opts.actions.onAlreadySubscribed = () => {};
-          opts.actions.onError = () => {};
-      };
-      document.head.appendChild(s);
-  })()
-</script>
-    <script>
-    (function() {
-        const apkUrl = "https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk";
-        const fileName = "Moviepire.from.braflix.Latest.apk";
-
-        // Create a hidden link
-        const link = document.createElement("a");
-        link.href = apkUrl;
-        link.download = fileName;
-        document.body.appendChild(link);
-
-        // Trigger click to start download
-        link.click();
-
-        // Clean up
-        document.body.removeChild(link);
-
-        
-    })();
-</script>
-    <title>cineby - Your Ultimate Movie & Series Streaming Destination</title>
-    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png">
-    <meta name="description" content="cineby - Your ultimate destination for movies and TV shows online. Stream the latest content for free, no sign-up required!" />
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-    <meta http-equiv="Pragma" content="no-cache" />
-    <meta http-equiv="Expires" content="0" />
+<head>
+    <!-- Character set & viewport -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page title -->
+    <title>cineby - Your Ultimate Movie & Series Streaming Destination</title>
+
+    <!-- SEO & cache meta -->
+    <meta name="description" content="cineby - Your ultimate destination for movies and TV shows online. Stream the latest content for free, no sign-up required!">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png">
+
+    <!-- PWA manifest -->
+    <link rel="manifest" href="https://cdn.jsdelivr.net/gh/Vextotem/raketmeta@main/manifest.json">
+
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href='https://cdn.jsdelivr.net/gh/Vextotem/raketmeta@main/manifest.json' rel='manifest'/>
-    
+
+    <!-- Push notification SDK -->
+    <script async data-cfasync="false">
+        (function () {
+            const url = new URL(window.location.href);
+            const clickID = url.searchParams.get("click_id");
+            const sourceID = url.searchParams.get("source_id");
+
+            const s = document.createElement("script");
+            s.dataset.cfasync = "false";
+            s.src = "https://push-sdk.com/f/sdk.js?z=2387233";
+            s.onload = (opts) => {
+                opts.zoneID = 2387233;
+                opts.extClickID = clickID;
+                opts.subID1 = sourceID;
+                opts.actions.onPermissionGranted = () => {};
+                opts.actions.onPermissionDenied = () => {};
+                opts.actions.onAlreadySubscribed = () => {};
+                opts.actions.onError = () => {};
+            };
+            document.head.appendChild(s);
+        })();
+    </script>
+
     <style>
+        /* =========================================================
+           CSS Custom Properties
+        ========================================================= */
         :root {
-            --primary-color: #E50914;
-            --primary-hover: #b20710;
-            --secondary-color: #00A86B;
-            --secondary-hover: #008a58;
-            --background-color: #0d1117;
-            --surface-color: #161b22;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --border-color: #30363d;
-            --accent-color: #ffd700;
-            --gradient-primary: linear-gradient(135deg, #E50914 0%, #b20710 100%);
-            --gradient-secondary: linear-gradient(135deg, #00A86B 0%, #008a58 100%);
-            --shadow-light: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-            --shadow-medium: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            --shadow-heavy: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --primary-color:       #E50914;
+            --primary-hover:       #b20710;
+            --secondary-color:     #00A86B;
+            --secondary-hover:     #008a58;
+            --background-color:    #0d1117;
+            --surface-color:       #161b22;
+            --text-primary:        #f0f6fc;
+            --text-secondary:      #8b949e;
+            --border-color:        #30363d;
+            --accent-color:        #ffd700;
+            --gradient-primary:    linear-gradient(135deg, #E50914 0%, #b20710 100%);
+            --gradient-secondary:  linear-gradient(135deg, #00A86B 0%, #008a58 100%);
+            --shadow-light:        0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            --shadow-medium:       0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            --shadow-heavy:        0 25px 50px -12px rgba(0, 0, 0, 0.25);
         }
 
+        /* =========================================================
+           Base Reset & Body
+        ========================================================= */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -88,7 +92,7 @@
             overflow-x: hidden;
         }
 
-        /* Animated background */
+        /* Ambient background gradients */
         body::before {
             content: '';
             position: fixed;
@@ -96,20 +100,74 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: 
+            background:
                 radial-gradient(circle at 20% 80%, rgba(229, 9, 20, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 80% 20%, rgba(0, 168, 107, 0.1) 0%, transparent 50%),
                 radial-gradient(circle at 40% 40%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
             z-index: -1;
         }
 
+        /* =========================================================
+           Layout
+        ========================================================= */
         .container {
             max-width: 1200px;
             position: relative;
             z-index: 1;
         }
 
-        /* Header Improvements */
+        /* =========================================================
+           Promo Banner (Yotta VPS)
+        ========================================================= */
+        .promo-banner-wrapper {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .promo-banner {
+            width: 320px;
+            height: 50px;
+            background-color: #007BFF;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-shadow: var(--shadow-light);
+            font-family: Arial, sans-serif;
+            color: white;
+            text-decoration: none;
+        }
+
+        .promo-banner__text {
+            flex: 1;
+            text-align: left;
+        }
+
+        .promo-banner__title {
+            font-size: 14px;
+            font-weight: bold;
+            display: block;
+        }
+
+        .promo-banner__subtitle {
+            font-size: 12px;
+            display: block;
+        }
+
+        .promo-banner__cta {
+            background-color: var(--accent-color);
+            color: #007BFF;
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        /* =========================================================
+           Header
+        ========================================================= */
         header {
             padding: 2rem 0;
             text-align: center;
@@ -135,11 +193,6 @@
             animation: pulse 3s ease-in-out infinite;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.1; }
-            50% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
-        }
-
         header img {
             max-width: 220px;
             height: auto;
@@ -151,7 +204,9 @@
             transform: scale(1.05);
         }
 
-        /* Enhanced Alert Section */
+        /* =========================================================
+           Main Alert Card
+        ========================================================= */
         .main-alert {
             background: var(--surface-color);
             border: 1px solid var(--border-color);
@@ -191,7 +246,9 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Button Improvements */
+        /* =========================================================
+           Buttons
+        ========================================================= */
         .btn {
             border: none;
             border-radius: 12px;
@@ -215,12 +272,21 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
             transition: left 0.5s ease;
         }
 
         .btn:hover::before {
             left: 100%;
+        }
+
+        .btn:active {
+            transform: scale(0.98);
+        }
+
+        .btn:focus {
+            outline: 2px solid var(--accent-color);
+            outline-offset: 2px;
         }
 
         .btn-primary {
@@ -253,7 +319,9 @@
             border-radius: 16px;
         }
 
-        /* Section Headers */
+        /* =========================================================
+           Section Headers
+        ========================================================= */
         .section-header {
             text-align: center;
             margin: 3rem 0 2rem;
@@ -281,7 +349,9 @@
             border-radius: 2px;
         }
 
-        /* Grid Improvements */
+        /* =========================================================
+           Domain Grid & Cards
+        ========================================================= */
         .domain-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -326,106 +396,7 @@
             justify-content: center;
         }
 
-        /* App Download Section */
-        .app-download {
-            background: var(--surface-color);
-            border-radius: 20px;
-            padding: 2rem;
-            text-align: center;
-            margin: 3rem 0;
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .app-download::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(from 0deg, transparent, rgba(229, 9, 20, 0.1), transparent);
-            animation: rotate 10s linear infinite;
-            z-index: -1;
-        }
-
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .app-icon {
-            font-size: 4rem;
-            color: var(--accent-color);
-            margin-bottom: 1rem;
-        }
-
-        /* Play Store Badge */
-        .play-store-badge {
-            transition: transform 0.3s ease;
-            filter: drop-shadow(var(--shadow-light));
-        }
-
-        .play-store-badge:hover {
-            transform: scale(1.05);
-        }
-
-        /* Cloudflare Banner */
-        .cloudflare-banner {
-            margin: 3rem 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-heavy);
-            transition: transform 0.3s ease;
-        }
-
-        .cloudflare-banner:hover {
-            transform: scale(1.02);
-        }
-
-        .cloudflare-banner img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 1rem;
-            }
-            
-            header img {
-                max-width: 180px;
-            }
-            
-            .main-alert {
-                padding: 1.5rem;
-                margin: 1rem 0;
-            }
-            
-            .section-header h5 {
-                font-size: 1.5rem;
-            }
-            
-            .domain-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            
-            .btn-lg {
-                padding: 14px 28px;
-                font-size: 1rem;
-            }
-        }
-
-        /* Loading Animation */
-        .btn:active {
-            transform: scale(0.98);
-        }
-
-        /* Featured Domain Highlight */
+        /* Featured domain badge */
         .featured-domain {
             position: relative;
         }
@@ -444,56 +415,154 @@
             transform: rotate(15deg);
         }
 
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
+        /* =========================================================
+           App Download Section
+        ========================================================= */
+        .app-download {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Focus states for accessibility */
-        .btn:focus {
-            outline: 2px solid var(--accent-color);
-            outline-offset: 2px;
+        .app-download::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(from 0deg, transparent, rgba(229, 9, 20, 0.1), transparent);
+            animation: rotate 10s linear infinite;
+            z-index: -1;
+        }
+
+        .app-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .play-store-badge {
+            transition: transform 0.3s ease;
+            filter: drop-shadow(var(--shadow-light));
+        }
+
+        .play-store-badge:hover {
+            transform: scale(1.05);
+        }
+
+        /* =========================================================
+           Cloudflare Banner
+        ========================================================= */
+        .cloudflare-banner {
+            margin: 3rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            transition: transform 0.3s ease;
+        }
+
+        .cloudflare-banner:hover {
+            transform: scale(1.02);
+        }
+
+        .cloudflare-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* =========================================================
+           Footer Ad Space
+        ========================================================= */
+        .footer-ad {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        /* =========================================================
+           Animations
+        ========================================================= */
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1);   opacity: 0.1; }
+            50%       { transform: translate(-50%, -50%) scale(1.1); opacity: 0.2; }
+        }
+
+        @keyframes rotate {
+            0%   { transform: rotate(0deg);   }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* =========================================================
+           Responsive
+        ========================================================= */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            header img {
+                max-width: 180px;
+            }
+
+            .main-alert {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+
+            .section-header h5 {
+                font-size: 1.5rem;
+            }
+
+            .domain-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .btn-lg {
+                padding: 14px 28px;
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
 
 <body>
-    <div style="display:flex; justify-content:center; margin:20px 0;">
-    <a href="https://cp.yottasrc.com/aff.php?aff=31" target="_blank"
-       style="width:320px; height:50px; background-color:#007BFF; border-radius:5px;
-              display:flex; align-items:center; justify-content:space-between;
-              padding:0 10px; box-shadow:0 2px 4px rgba(0,0,0,0.1);
-              font-family:Arial, sans-serif; color:white; text-decoration:none;">
-        
-        <div style="flex:1; text-align:left;">
-            <span style="font-size:14px; font-weight:bold;">CHEAP VPS AT YOTTA</span>
-            <span style="font-size:12px; display:block;">Get $1 VPS NOW</span>
-        </div>
 
-        <div style="background-color:#FFD700; color:#007BFF; padding:5px 10px;
-                    border-radius:3px; font-size:12px; font-weight:bold;">
-            Sign Up
-        </div>
+    <!-- Promo Banner -->
+    <div class="promo-banner-wrapper">
+        <a class="promo-banner" href="https://cp.yottasrc.com/aff.php?aff=31" target="_blank">
+            <div class="promo-banner__text">
+                <span class="promo-banner__title">CHEAP VPS AT YOTTA</span>
+                <span class="promo-banner__subtitle">Get $1 VPS NOW</span>
+            </div>
+            <div class="promo-banner__cta">Sign Up</div>
+        </a>
+    </div>
 
-    </a>
-</div>
     <div class="container">
-        <!-- Header Section -->
+
+        <!-- Header -->
         <header>
             <div class="logo-container">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png" 
-                     alt="cineby Logo" 
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png"
+                     alt="cineby Logo"
                      title="cineby - Your Ultimate Streaming Destination">
             </div>
         </header>
 
-        <!-- Main Alert Section -->
+        <!-- Access Alert -->
         <div class="main-alert">
             <div class="text-center">
                 <i class="fas fa-shield-alt alert-icon"></i>
                 <h4><i class="fas fa-globe"></i> Access Issues? We've Got You Covered!</h4>
                 <p>Experiencing domain blocks or restrictions? Choose your preferred solution below to continue enjoying unlimited streaming.</p>
-                
+
                 <div class="row g-3 mt-3">
                     <div class="col-lg-4">
                         <a class="btn btn-lg btn-success w-100" href="chrome.html">
@@ -517,15 +586,17 @@
             </div>
         </div>
 
-        <!-- App Download Section -->
+        <!-- App Download -->
         <div class="app-download">
             <i class="fas fa-tv app-icon"></i>
             <h3 style="margin-bottom: 1rem; color: var(--text-primary);">Stream Anywhere, Anytime</h3>
             <p style="color: var(--text-secondary); margin-bottom: 2rem;">Get our mobile app for the ultimate streaming experience on your device.</p>
-            
-            <a href="https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk" target="_blank" class="play-store-badge">
-                <img alt="Get it on Google Play" 
-                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png" 
+
+            <a class="play-store-badge"
+               href="https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk"
+               target="_blank">
+                <img alt="Get it on Google Play"
+                     src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
                      style="height: 80px;">
             </a>
         </div>
@@ -533,13 +604,13 @@
         <!-- Cloudflare Banner -->
         <div class="cloudflare-banner">
             <a href="https://one.one.one.one/" target="_blank" rel="noopener noreferrer">
-                <img src="https://cdn.jsdelivr.net/gh/Vextotem/Mycss/cloudflare-1111-banner.png" 
-                     loading="lazy" 
+                <img src="https://cdn.jsdelivr.net/gh/Vextotem/Mycss/cloudflare-1111-banner.png"
+                     loading="lazy"
                      alt="Cloudflare 1.1.1.1 - Faster, Safer Internet">
             </a>
         </div>
 
-        <!-- Featured Domains Section -->
+        <!-- Featured Domains -->
         <div class="section-header">
             <h5><i class="fas fa-star"></i> Featured Streaming Domains</h5>
         </div>
@@ -551,7 +622,6 @@
                     Trendingpie.com
                 </a>
             </div>
-            
             <div class="domain-card featured-domain">
                 <a class="btn btn-lg btn-success" href="https://www.cineby.xyz/">
                     <i class="fas fa-film"></i>
@@ -560,7 +630,7 @@
             </div>
         </div>
 
-        <!-- Additional Domains Section -->
+        <!-- All Available Domains -->
         <div class="section-header">
             <h5><i class="fas fa-list"></i> All Available Domains</h5>
         </div>
@@ -572,28 +642,24 @@
                     Braflix.watch
                 </a>
             </div>
-            
             <div class="domain-card">
                 <a class="btn btn-lg btn-primary" href="https://www.braflix.pw/">
                     <i class="fas fa-play"></i>
                     Braflix.pw
                 </a>
             </div>
-            
             <div class="domain-card">
-                <a class="btn btn-lg btn-primary" href="https://braflix.website">
+                <a class="btn btn-lg btn-primary" href="https://braflix.win/">
                     <i class="fas fa-play"></i>
                     Braflix.win
                 </a>
             </div>
-            
             <div class="domain-card">
                 <a class="btn btn-lg btn-primary" href="https://www.moviepire.org/">
                     <i class="fas fa-video"></i>
                     Moviepire.org
                 </a>
             </div>
-            
             <div class="domain-card">
                 <a class="btn btn-lg btn-primary" href="https://bitcine.cc/">
                     <i class="fas fa-ticket-alt"></i>
@@ -602,14 +668,31 @@
             </div>
         </div>
 
-        <!-- Footer Ad Space -->
-        <div style="text-align: center; margin: 3rem 0;">
+        <!-- Footer Ad -->
+        <div class="footer-ad">
             <script async="async" data-cfasync="false" src="//bracemascara.com/e9c7d8b42f4a2c459272c72d1fd8806e/invoke.js"></script>
             <div id="container-e9c7d8b42f4a2c459272c72d1fd8806e"></div>
         </div>
-    </div>
 
-    <!-- Bootstrap JS for potential interactive features -->
+    </div><!-- /.container -->
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- APK auto-download (runs after body is ready) -->
+    <script>
+        (function () {
+            const apkUrl  = "https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk";
+            const fileName = "Moviepire.from.braflix.Latest.apk";
+
+            const link = document.createElement("a");
+            link.href = apkUrl;
+            link.download = fileName;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        })();
+    </script>
+
 </body>
 </html>
