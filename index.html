@@ -4,11 +4,10 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>cineby - Your Ultimate Movie & Series Streaming Destination</title>
-
 <meta name="description" content="cineby - Stream movies and TV shows online for free.">
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+
+<title>cineby - Your Ultimate Movie & Series Streaming Destination</title>
 
 <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png">
 
@@ -16,50 +15,230 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
 <style>
-body {
-    background:#0d1117;
-    color:#f0f6fc;
-    font-family: Arial, sans-serif;
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #f0f6fc;
+    --muted: #8b949e;
+    --accent: #E50914;
+    --accent-hover: #b20710;
+    --featured: #238636;
+    --featured-hover: #1a6329;
 }
-.container { max-width:1200px; }
 
+* { box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    padding-bottom: 80px; /* prevent floating ad overlap */
+}
+
+.container { max-width: 1000px; }
+
+/* --- HEADER --- */
+.site-header {
+    padding: 40px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
+
+.site-header img {
+    width: 130px;
+}
+
+.site-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 12px 0 4px;
+    letter-spacing: -0.3px;
+}
+
+.site-header p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* --- SECTION LABELS --- */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
+
+/* --- ACCESS ALERT --- */
+.alert-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 36px;
+}
+
+.alert-card h5 {
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.alert-card p {
+    color: var(--muted);
+    font-size: 0.875rem;
+    margin-bottom: 16px;
+}
+
+/* --- DOMAIN GRID --- */
 .domain-grid {
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+    margin-bottom: 36px;
 }
 
 .domain-card {
-    background:#161b22;
-    padding:15px;
-    border-radius:10px;
-    border:1px solid #30363d;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px;
+    transition: border-color 0.2s, transform 0.15s;
+    position: relative;
 }
 
+.domain-card:hover {
+    border-color: #484f58;
+    transform: translateY(-2px);
+}
+
+.domain-card .badge-featured {
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    background: var(--featured);
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 2px 8px;
+    border-radius: 20px;
+}
+
+/* --- BUTTONS --- */
 .btn {
-    border-radius:10px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+    background: #1f6feb;
+    border: none;
+}
+
+.btn-primary:hover { background: #1a5fcc; }
+
+.btn-success {
+    background: var(--featured);
+    border: none;
+}
+
+.btn-success:hover { background: var(--featured-hover); }
+
+.btn-outline-secondary {
+    border-color: var(--border);
+    color: var(--text);
+}
+
+.btn-outline-secondary:hover {
+    background: var(--border);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+/* --- FLOATING AD --- */
+#floating-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    background: rgba(13,17,23,0.9);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid var(--border);
+    padding: 6px 0 4px;
+}
+
+.ad-close-btn {
+    display: block;
+    text-align: right;
+    max-width: 320px;
+    margin: 0 auto 2px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ad-close-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background: #30363d;
+    color: var(--muted);
+    border-radius: 50%;
+    font-size: 10px;
+    line-height: 1;
+    transition: background 0.2s;
+}
+
+.ad-close-btn:hover span {
+    background: #484f58;
+    color: var(--text);
+}
+
+/* --- FOOTER --- */
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
 }
 </style>
 
 </head>
-
 <body>
 
 <!-- Floating Banner Ad -->
-<div id="floating-banner" style="position:fixed; bottom:0; left:0; width:100%; z-index:10000; text-align:center;">
-  
-  <!-- Close button (also opens ad link) -->
+<div id="floating-banner">
   <a href="https://crowdsynonym.com/tth2ujj3?key=baa5c00e2caf22f4ceb809c79bf68a65"
      target="_blank"
-     onclick="document.getElementById('floating-banner').style.display='none';"
-     style="display:block; text-align:right; max-width:320px; margin:0 auto 2px; cursor:pointer;">
-     
-    <img src="https://www.freeiconspng.com/uploads/blue-close-button-png-7.png"
-         width="20"
-         alt="close" />
+     rel="noopener noreferrer"
+     class="ad-close-btn"
+     onclick="document.getElementById('floating-banner').style.display='none'; return true;">
+    <span><i class="fa fa-times"></i></span>
   </a>
-
-  <!-- Ad Script -->
   <div style="max-width:320px; margin:0 auto;">
     <script>
       atOptions = {
@@ -72,85 +251,94 @@ body {
     </script>
     <script src="https://crowdsynonym.com/432208a4b61ab681c09ab68fe06004de/invoke.js"></script>
   </div>
-
 </div>
-<!-- Floating Banner Ad -->
 
-<div class="container text-center mt-4">
+<div class="container">
 
-<!-- LOGO -->
-<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png" width="200">
+  <!-- HEADER -->
+  <div class="site-header text-center">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png" alt="Cineby logo">
+    <h1>cineby</h1>
+    <p>Your Ultimate Movie &amp; Series Streaming Destination</p>
+  </div>
 
-<!-- ALERT -->
-<div class="mt-4 p-4 bg-dark rounded">
-    <h4>Access Issues?</h4>
-    <p>Use one of the options below:</p>
-
+  <!-- ACCESS ISSUES -->
+  <div class="alert-card">
+    <h5><i class="fa fa-circle-exclamation me-2" style="color:var(--accent)"></i>Having Access Issues?</h5>
+    <p>Can't reach the site? Try one of the options below to get unblocked.</p>
     <div class="row g-2">
-        <div class="col-md-4">
-            <a class="btn btn-success w-100" href="chrome.html">Chrome Guide</a>
-        </div>
-        <div class="col-md-4">
-            <a class="btn btn-success w-100" href="https://warp.plus/5JLk9">Warp VPN</a>
-        </div>
-        <div class="col-md-4">
-            <a class="btn btn-success w-100" href="https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk">
-                Download App
-            </a>
-        </div>
+      <div class="col-sm-4">
+        <a class="btn btn-success w-100" href="chrome.html">
+          <i class="fab fa-chrome me-1"></i> Chrome Guide
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a class="btn btn-success w-100" href="https://warp.plus/5JLk9" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-shield-halved me-1"></i> Warp VPN
+        </a>
+      </div>
+      <div class="col-sm-4">
+        <a class="btn btn-success w-100" href="https://github.com/Vextotem/Cinebyunblock/releases/download/V1.0.0/Moviepire.from.braflix.Latest.apk" target="_blank" rel="noopener noreferrer">
+          <i class="fa fa-download me-1"></i> Download App
+        </a>
+      </div>
     </div>
-</div>
+  </div>
 
-<!-- FEATURED -->
-<h4 class="mt-5">Featured Domains</h4>
-<div class="domain-grid mt-3">
-
+  <!-- FEATURED DOMAINS -->
+  <div class="section-label"><i class="fa fa-star" style="color:#e3b341"></i> Featured</div>
+  <div class="domain-grid">
     <div class="domain-card">
-        <a class="btn btn-success w-100" href="https://www.trendingpie.com/">Trendingpie</a>
+      <span class="badge-featured">Featured</span>
+      <a class="btn btn-success w-100" href="https://www.trendingpie.com/" target="_blank" rel="noopener noreferrer">
+        Trendingpie
+      </a>
     </div>
-
     <div class="domain-card">
-        <a class="btn btn-success w-100" href="https://www.cineby.xyz/">Cineby.xyz</a>
+      <span class="badge-featured">Featured</span>
+      <a class="btn btn-success w-100" href="https://www.cineby.xyz/" target="_blank" rel="noopener noreferrer">
+        Cineby.xyz
+      </a>
     </div>
+  </div>
 
-</div>
-
-<!-- ALL DOMAINS -->
-<h4 class="mt-5">All Domains</h4>
-<div class="domain-grid mt-3">
-
+  <!-- ALL DOMAINS -->
+  <div class="section-label"><i class="fa fa-globe"></i> All Domains</div>
+  <div class="domain-grid">
     <div class="domain-card">
-        <a class="btn btn-primary w-100" href="https://flixmomo.ru/">Flixmomo</a>
+      <a class="btn btn-primary w-100" href="https://flixmomo.ru/" target="_blank" rel="noopener noreferrer">Flixmomo</a>
     </div>
-
     <div class="domain-card">
-        <a class="btn btn-primary w-100" href="https://www.braflix.website/">Braflix.website</a>
+      <a class="btn btn-primary w-100" href="https://www.braflix.website/" target="_blank" rel="noopener noreferrer">Braflix.website</a>
     </div>
-
     <div class="domain-card">
-        <a class="btn btn-primary w-100" href="https://braflix.win/">Braflix.win</a>
+      <a class="btn btn-primary w-100" href="https://braflix.win/" target="_blank" rel="noopener noreferrer">Braflix.win</a>
     </div>
-
     <div class="domain-card">
-        <a class="btn btn-primary w-100" href="https://www.moviepire.org/">Moviepire</a>
+      <a class="btn btn-primary w-100" href="https://www.moviepire.org/" target="_blank" rel="noopener noreferrer">Moviepire</a>
     </div>
-
     <div class="domain-card">
-        <a class="btn btn-primary w-100" href="https://www.braflix.pw/">Braflix.pw</a>
+      <a class="btn btn-primary w-100" href="https://www.braflix.pw/" target="_blank" rel="noopener noreferrer">Braflix.pw</a>
     </div>
-
     <div class="domain-card">
-        <a class="btn btn-primary w-100" href="https://bitcine.cc/">Bitcine</a>
+      <a class="btn btn-primary w-100" href="https://bitcine.cc/" target="_blank" rel="noopener noreferrer">Bitcine</a>
     </div>
+  </div>
 
-</div>
+  <!-- FOOTER -->
+  <div class="site-footer">
+    © <span id="year"></span> Cineby — All rights reserved
+  </div>
 
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<!--  -->
-<center><script async="async" data-cfasync="false" src="https://crowdsynonym.com/e9c7d8b42f4a2c459272c72d1fd8806e/invoke.js"></script>
-<div id="container-e9c7d8b42f4a2c459272c72d1fd8806e"></div>
-</center>
+<script async data-cfasync="false" src="https://crowdsynonym.com/e9c7d8b42f4a2c459272c72d1fd8806e/invoke.js"></script>
+<div id="container-e9c7d8b42f4a2c459272c72d1fd8806e" style="text-align:center"></div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
