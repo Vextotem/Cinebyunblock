@@ -1,588 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Floating Banner Ad -->
-<div id="floating-banner" style="position:fixed; bottom:0; left:0; width:100%; z-index:10000; text-align:center;">
-  
-  <!-- Close button (also opens ad link) -->
-  <a href="https://crowdsynonym.com/tth2ujj3?key=baa5c00e2caf22f4ceb809c79bf68a65"
-     target="_blank"
-     onclick="document.getElementById('floating-banner').style.display='none';"
-     style="display:block; text-align:right; max-width:320px; margin:0 auto 2px; cursor:pointer;">
-     
-    <img src="https://www.freeiconspng.com/uploads/blue-close-button-png-7.png"
-         width="20"
-         alt="close" />
-  </a>
 
-  <!-- Ad Script -->
-  <div style="max-width:320px; margin:0 auto;">
-    <script>
-      atOptions = {
-        'key' : '432208a4b61ab681c09ab68fe06004de',
-        'format' : 'iframe',
-        'height' : 50,
-        'width' : 320,
-        'params' : {}
-      };
-    </script>
-    <script src="https://crowdsynonym.com/432208a4b61ab681c09ab68fe06004de/invoke.js"></script>
-  </div>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Step-by-step guide to enable ECH in Chrome and bypass ISP domain blocks. Access Cineby and other streaming sites without restrictions.">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
-</div>
-<!-- Floating Banner Ad -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Step-by-step guide to enable ECH in Chrome and bypass ISP domain blocks. Access cineby and other streaming sites without restrictions.">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
+<title>Cineby - Chrome Setup Guide | Bypass ISP Restrictions</title>
 
-    <title>Cineby - Chrome Setup Guide | Bypass ISP Restrictions</title>
+<link rel="icon" href="https://cineby.my/icon.png">
 
-    <link rel="icon" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --text: #f0f6fc;
+    --muted: #8b949e;
+    --accent: #E50914;
+    --accent-hover: #b20710;
+    --featured: #238636;
+    --featured-hover: #1a6329;
+}
 
-    <style>
-        :root {
-            --primary-color: #E50914;
-            --primary-hover: #b20710;
-            --secondary-color: #00A86B;
-            --secondary-hover: #008a58;
-            --background-color: #0d1117;
-            --surface-color: #161b22;
-            --text-primary: #f0f6fc;
-            --text-secondary: #8b949e;
-            --border-color: #30363d;
-            --accent-color: #ffd700;
-            --success-color: #28a745;
-            --warning-color: #ffc107;
-            --info-color: #17a2b8;
-            --gradient-primary: linear-gradient(135deg, #E50914 0%, #b20710 100%);
-            --gradient-secondary: linear-gradient(135deg, #00A86B 0%, #008a58 100%);
-            --shadow-light: 0 4px 6px -1px rgba(0,0,0,0.2);
-            --shadow-medium: 0 10px 15px -3px rgba(0,0,0,0.3);
-        }
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-        * { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
 
-        html { scroll-behavior: smooth; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding-bottom: 80px;
+}
 
-        body {
-            background: var(--background-color);
-            color: var(--text-primary);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+.container { max-width: 1000px; }
 
-        /* Ambient background */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background:
-                radial-gradient(circle at 20% 80%, rgba(229,9,20,0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(0,168,107,0.08) 0%, transparent 50%);
-            z-index: -1;
-            pointer-events: none;
-        }
+/* --- HEADER --- */
+.site-header {
+    padding: 40px 0 24px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 32px;
+}
 
-        .container {
-            max-width: 1000px;
-            padding: 0 1rem;
-            position: relative;
-        }
+.site-header img { width: 130px; }
 
-        /* ── HEADER ── */
-        header {
-            padding: 2rem 0 1.5rem;
-            text-align: center;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 2rem;
-        }
+.site-header h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 12px 0 4px;
+    letter-spacing: -0.3px;
+}
 
-        .logo-container {
-            position: relative;
-            display: inline-block;
-        }
+.site-header p {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin: 0;
+}
 
-        .logo-container::before {
-            content: '';
-            position: absolute;
-            inset: -10%;
-            background: var(--gradient-primary);
-            border-radius: 50%;
-            opacity: 0.08;
-            z-index: -1;
-            animation: pulse 3s ease-in-out infinite;
-        }
+/* --- SECTION LABELS --- */
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--muted);
+    margin-bottom: 14px;
+    margin-top: 28px;
+}
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.08; }
-            50%       { transform: scale(1.1); opacity: 0.16; }
-        }
+.section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+}
 
-        header img {
-            max-width: 180px;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
+/* --- CONTENT CARDS --- */
+.content-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+}
 
-        header img:hover { transform: scale(1.05); }
+.content-card:hover { border-color: #484f58; }
 
-        /* ── PAGE TITLE ── */
-        .page-title {
-            text-align: center;
-            margin: 0 0 2rem;
-            padding: 2rem;
-            background: var(--surface-color);
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            position: relative;
-            overflow: hidden;
-        }
+.content-card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-        .page-title::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0;
-            height: 3px;
-            background: var(--gradient-primary);
-        }
+.content-card h2 i { color: var(--accent); font-size: 1rem; }
 
-        .page-title h1 {
-            font-size: 1.9rem;
-            font-weight: 700;
-            margin-bottom: 0.75rem;
-        }
+/* --- STEP CARDS --- */
+.step-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    transition: border-color 0.2s;
+}
 
-        .page-title p {
-            font-size: 1rem;
-            color: var(--text-secondary);
-            margin: 0;
-        }
+.step-card:hover { border-color: #484f58; border-left-color: #e3b341; }
 
-        /* ── CARDS ── */
-        .content-card {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-radius: 14px;
-            padding: 1.75rem;
-            margin-bottom: 1.75rem;
-            transition: box-shadow 0.25s ease;
-        }
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
 
-        .content-card:hover {
-            box-shadow: var(--shadow-medium);
-        }
+.step-number {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
 
-        .content-card h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
+.step-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
 
-        /* ── STEP CARDS ── */
-        .step-card {
-            background: var(--surface-color);
-            border: 1px solid var(--border-color);
-            border-left: 4px solid var(--primary-color);
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            margin-bottom: 1.25rem;
-            transition: border-left-color 0.2s ease, box-shadow 0.2s ease;
-        }
+.step-card p { color: var(--muted); font-size: 0.875rem; margin-bottom: 8px; }
+.step-card p:last-child { margin-bottom: 0; }
+.step-card strong { color: var(--text); }
 
-        .step-card:hover {
-            border-left-color: var(--accent-color);
-            box-shadow: var(--shadow-light);
-        }
+/* --- CODE SNIPPETS --- */
+.code-snippet {
+    background: #0a0e17;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin: 10px 0;
+    font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
+    font-size: 0.875rem;
+    color: #e3b341;
+    position: relative;
+    overflow-x: auto;
+}
 
-        .step-number {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 38px;
-            height: 38px;
-            flex-shrink: 0;
-            background: var(--gradient-primary);
-            color: white;
-            border-radius: 50%;
-            font-weight: 600;
-            font-size: 1rem;
-            margin-right: 1rem;
-            margin-bottom: 0.75rem;
-        }
+.copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 3px 10px;
+    font-size: 0.7rem;
+    cursor: pointer;
+    background: rgba(229,9,20,0.12);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+    font-family: Arial, sans-serif;
+}
 
-        .step-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
+.copy-btn:hover { background: var(--accent); color: #fff; }
 
-        /* ── CODE SNIPPETS ── */
-        .code-snippet {
-            background: #0a0e17;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 0.85rem 1rem;
-            margin: 1rem 0;
-            font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
-            font-size: 0.9rem;
-            color: var(--accent-color);
-            position: relative;
-            overflow-x: auto;
-            /* real copy handled by JS — no fake ::before needed */
-        }
+/* --- LISTS --- */
+.guide-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
 
-        .copy-btn {
-            position: absolute;
-            top: 8px;
-            right: 8px;
-            padding: 3px 10px;
-            font-size: 0.72rem;
-            font-family: inherit;
-            cursor: pointer;
-            background: rgba(229,9,20,0.15);
-            border: 1px solid var(--primary-color);
-            color: var(--primary-color);
-            border-radius: 5px;
-            transition: background 0.2s, color 0.2s;
-        }
+.guide-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.875rem;
+    color: var(--muted);
+}
 
-        .copy-btn:hover {
-            background: var(--primary-color);
-            color: #fff;
-        }
+.guide-list li:last-child { border-bottom: none; }
 
-        /* ── FEATURE LIST ── */
-        .feature-list {
-            background: rgba(255,255,255,0.02);
-            border-radius: 10px;
-            padding: 1.25rem 1.5rem;
-            border: 1px solid var(--border-color);
-            margin: 1rem 0;
-        }
+.guide-list li::before {
+    content: '→';
+    color: var(--accent);
+    font-weight: bold;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
 
-        .feature-list ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+.guide-list li strong { color: var(--text); }
 
-        .feature-list li {
-            display: flex;
-            align-items: flex-start;
-            padding: 0.5rem 0;
-            border-bottom: 1px solid var(--border-color);
-            gap: 0.75rem;
-        }
+.guide-list code {
+    background: rgba(229,9,20,0.1);
+    color: #e3b341;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'Menlo', monospace;
+    font-size: 0.82rem;
+}
 
-        .feature-list li:last-child { border-bottom: none; }
+/* --- ALERTS --- */
+.alert-strip {
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
 
-        .feature-list li::before {
-            content: '→';
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.1rem;
-            flex-shrink: 0;
-            margin-top: 1px;
-        }
+.alert-strip i { flex-shrink: 0; margin-top: 2px; }
 
-        .feature-list code {
-            background: rgba(229,9,20,0.12);
-            color: var(--accent-color);
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: 'Monaco', 'Menlo', monospace;
-            font-size: 0.85rem;
-        }
+.alert-info  { background: rgba(23,162,184,0.08); border: 1px solid #17a2b8; color: #4dc3d5; }
+.alert-success { background: rgba(35,134,54,0.1); border: 1px solid #238636; color: #4cbb6e; }
+.alert-warning { background: rgba(255,193,7,0.08); border: 1px solid #ffc107; color: #ffc107; }
 
-        /* ── MEDIA ── */
-        .media-container {
-            margin: 1.75rem 0;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: var(--shadow-medium);
-        }
+/* --- MEDIA --- */
+.media-wrap {
+    margin: 14px 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+}
 
-        .media-container iframe {
-            display: block;
-            width: 100%;
-            border-radius: 12px;
-        }
+.media-wrap iframe {
+    display: block;
+    width: 100%;
+}
 
-        .media-container img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            display: block;
-            transition: transform 0.3s ease;
-        }
+.media-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s;
+}
 
-        .media-container img:hover { transform: scale(1.02); }
+.media-wrap img:hover { transform: scale(1.01); }
 
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
+.img-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+    margin: 14px 0;
+}
 
-        .image-gallery img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            border: 1px solid var(--border-color);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-            display: block;
-        }
+.img-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    display: block;
+    transition: transform 0.2s;
+}
 
-        .image-gallery img:hover {
-            transform: scale(1.03);
-            box-shadow: var(--shadow-medium);
-        }
+.img-grid img:hover { transform: scale(1.02); }
 
-        /* ── ALERTS ── */
-        .alert {
-            padding: 1rem 1.25rem;
-            border-radius: 10px;
-            margin: 1.25rem 0;
-            border: 1px solid;
-            display: flex;
-            gap: 0.75rem;
-            align-items: flex-start;
-        }
+/* --- BUTTONS --- */
+.btn {
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: background 0.2s, transform 0.1s;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+}
 
-        .alert i { margin-top: 2px; flex-shrink: 0; }
+.btn:active { transform: scale(0.97); }
 
-        .alert-info {
-            background: rgba(23,162,184,0.08);
-            border-color: var(--info-color);
-            color: #4dc3d5;
-        }
+.btn-primary { background: #1f6feb; border: none; color: #fff; }
+.btn-primary:hover { background: #1a5fcc; color: #fff; }
 
-        .alert-success {
-            background: rgba(40,167,69,0.08);
-            border-color: var(--success-color);
-            color: #4cbb6e;
-        }
+.btn-outline-secondary {
+    border: 1px solid var(--border);
+    color: var(--text);
+    background: transparent;
+}
 
-        .alert-warning {
-            background: rgba(255,193,7,0.08);
-            border-color: var(--warning-color);
-            color: #ffc107;
-        }
+.btn-outline-secondary:hover {
+    background: var(--border);
+    color: var(--text);
+}
 
-        /* ── BUTTONS ── */
-        a { color: var(--primary-color); text-decoration: none; transition: color 0.2s; }
-        a:hover { color: var(--accent-color); text-decoration: underline; }
+/* --- BACK BUTTON --- */
+.back-home {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
 
-        .btn {
-            border: none;
-            border-radius: 8px;
-            font-weight: 500;
-            padding: 10px 20px;
-            transition: all 0.2s ease;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            cursor: pointer;
-        }
+/* --- FLOATING AD --- */
+#floating-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    text-align: center;
+    background: rgba(13,17,23,0.9);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid var(--border);
+    padding: 6px 0 4px;
+}
 
-        .btn:hover { transform: translateY(-2px); text-decoration: none; }
+/* --- FOOTER --- */
+.site-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 0.8rem;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+}
 
-        .btn-primary { background: var(--gradient-primary); color: #fff; }
-        .btn-primary:hover { box-shadow: 0 4px 14px rgba(229,9,20,0.4); color: #fff; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #e3b341; text-decoration: underline; }
 
-        .btn-success { background: var(--gradient-secondary); color: #fff; }
-        .btn-success:hover { box-shadow: 0 4px 14px rgba(0,168,107,0.4); color: #fff; }
+@media (max-width: 768px) {
+    .site-header img { width: 100px; }
+    .site-header h1 { font-size: 1.3rem; }
+    .content-card { padding: 16px; }
+    .img-grid { grid-template-columns: 1fr; }
+    .back-home .btn-label { display: none; }
+}
+</style>
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid var(--border-color);
-            color: var(--text-primary);
-        }
-
-        .btn-outline:hover {
-            background: var(--surface-color);
-            border-color: var(--text-secondary);
-            color: var(--text-primary);
-        }
-
-        /* ── BACK HOME ── */
-        .back-home {
-            position: fixed;
-            top: 1.25rem;
-            right: 1.25rem;
-            z-index: 1000;
-        }
-
-        /* ── FOOTER ── */
-        .footer {
-            text-align: center;
-            padding: 2.5rem 0;
-            border-top: 1px solid var(--border-color);
-            margin-top: 2rem;
-        }
-
-        .footer .signature {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 4px;
-        }
-
-        .footer .tagline {
-            color: var(--text-secondary);
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-
-        .footer .copyright {
-            margin-top: 10px;
-            color: var(--text-secondary);
-            font-size: 0.82rem;
-        }
-
-        /* ── FOCUS / A11Y ── */
-        *:focus-visible {
-            outline: 2px solid var(--accent-color);
-            outline-offset: 2px;
-        }
-
-        /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            header img { max-width: 140px; }
-            .page-title { padding: 1.5rem; }
-            .page-title h1 { font-size: 1.5rem; }
-            .content-card { padding: 1.25rem; }
-            .step-card { padding: 1rem; }
-            .back-home { top: 0.75rem; right: 0.75rem; }
-            .back-home .btn-label { display: none; }
-            .image-gallery { grid-template-columns: 1fr; }
-        }
-    </style>
 </head>
-
 <body>
-
-<!-- Skip to main content -->
-<a href="#main" id="skip-link" style="position:fixed;left:-9999px;top:0;z-index:9999;padding:8px 16px;background:var(--surface-color);color:var(--text-primary);border-radius:0 0 8px 0;font-size:0.875rem;">
-    Skip to main content
-</a>
 
 <!-- Back to Home -->
 <div class="back-home">
-    <a href="/" class="btn btn-outline" title="Back to Home">
+    <a href="/" class="btn btn-outline-secondary" title="Back to Home">
         <i class="fas fa-home"></i>
         <span class="btn-label">Home</span>
     </a>
 </div>
 
-<div class="container mx-auto py-4" id="main">
+<div class="container mx-auto px-3">
 
-    <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <a href="/" title="Back to cineby Home">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirfZOr_xe-PTgly08bjqysdRvY5Ldcv7BrBMFa4rU30WLwqOG9PIeRi01aHcTap_Gk3NlTnB6d_kCRP1-j_0nQczMX97qCMScYwUmxDW1bN8qNq-uhCY9Y4pOotvQyxDoREPEAgN1ba9oQ7P2VvwoI7zULVwtajrAreOFCk9LujalKvhvX7mza1XITAf9q/s1600/1000120976.png"
-                     alt="Cineby Logo">
-            </a>
-        </div>
-    </header>
-
-    <!-- Page Title -->
-    <div class="page-title">
-        <h1><i class="fab fa-chrome"></i> Chrome Setup Guide</h1>
-        <p>Enable ECH (Encrypted Client Hello) to bypass ISP domain blocks and stream without restrictions</p>
+    <!-- HEADER -->
+    <div class="site-header text-center">
+        <a href="/">
+            <img src="https://cineby.my/logo.png" alt="Cineby logo">
+        </a>
+        <h1><i class="fab fa-chrome me-2" style="color:var(--accent)"></i>Chrome Setup Guide</h1>
+        <p>Enable ECH to bypass ISP blocks and stream without restrictions</p>
     </div>
 
-    <!-- Introduction -->
+    <!-- INTRO -->
+    <div class="section-label"><i class="fa fa-info-circle" style="color:#17a2b8"></i> Overview</div>
     <div class="content-card">
-        <div class="alert alert-info">
+        <div class="alert-strip alert-info">
             <i class="fas fa-info-circle"></i>
-            <div><strong>Experiencing Access Issues?</strong> If your ISP blocks certain domains, these steps will help you bypass the blockage and browse securely — no VPN required.</div>
+            <div><strong>Experiencing Access Issues?</strong> If your ISP blocks certain domains, these steps will help you bypass it and browse securely — no VPN required.</div>
         </div>
     </div>
 
-    <!-- Media Recognition -->
+    <!-- MEDIA RECOGNITION -->
     <div class="content-card">
         <h2><i class="fas fa-newspaper"></i> Media Recognition</h2>
-        <p>This method has been covered by major tech publications:</p>
-        <div class="feature-list">
-            <ul>
-                <li><a href="https://trendingpie.com/Wiki/" target="_blank" rel="noopener noreferrer">Trending Pie</a> — Comprehensive tech guides</li>
-                <li><a href="https://www.xatakandroid.com/aplicaciones-android/antidoto-google-chrome-bloqueo-webs-esta-disponible-todo-que-necesitas-saber-ech" target="_blank" rel="noopener noreferrer">Xataka Android</a> — Mobile technology experts</li>
-                <li><a href="https://www.genbeta.com/actualidad/chrome-cloudflare-habilitan-protocolo-privacidad-que-se-pondra-dificil-a-bloqueos-laliga-asi-se-activa-ech" target="_blank" rel="noopener noreferrer">Genbeta</a> — Spanish tech authority</li>
-                <li><a href="https://elandroidefeliz.com/como-activar-el-ech-en-chrome-para-acceder-a-webs-bloqueadas/" target="_blank" rel="noopener noreferrer">El Androide Feliz</a> — Android specialists</li>
-                <li><a href="https://www.meneame.net/m/tecnolog%C3%ADa/como-activar-ech-chrome-acceder-webs-bloqueadas-operadoras" target="_blank" rel="noopener noreferrer">Menéame</a> — Technology community</li>
-            </ul>
-        </div>
-        <div class="alert alert-success">
+        <p style="color:var(--muted);font-size:0.875rem;margin-bottom:10px;">This method has been covered by major tech publications:</p>
+        <ul class="guide-list">
+            <li><a href="https://trendingpie.com/Wiki/" target="_blank" rel="noopener noreferrer">Trending Pie</a> — Comprehensive tech guides</li>
+            <li><a href="https://www.xatakandroid.com/aplicaciones-android/antidoto-google-chrome-bloqueo-webs-esta-disponible-todo-que-necesitas-saber-ech" target="_blank" rel="noopener noreferrer">Xataka Android</a> — Mobile technology experts</li>
+            <li><a href="https://www.genbeta.com/actualidad/chrome-cloudflare-habilitan-protocolo-privacidad-que-se-pondra-dificil-a-bloqueos-laliga-asi-se-activa-ech" target="_blank" rel="noopener noreferrer">Genbeta</a> — Spanish tech authority</li>
+            <li><a href="https://elandroidefeliz.com/como-activar-el-ech-en-chrome-para-acceder-a-webs-bloqueadas/" target="_blank" rel="noopener noreferrer">El Androide Feliz</a> — Android specialists</li>
+            <li><a href="https://www.meneame.net/m/tecnolog%C3%ADa/como-activar-ech-chrome-acceder-webs-bloqueadas-operadoras" target="_blank" rel="noopener noreferrer">Menéame</a> — Technology community</li>
+        </ul>
+        <div class="alert-strip alert-success mt-3">
             <i class="fas fa-shield-alt"></i>
             <div><strong>Enhanced Security:</strong> ECH encrypts connection metadata, making your browsing more private beyond just bypassing blocks. <a href="https://www.genbeta.com/actualidad/chrome-cloudflare-habilitan-protocolo-privacidad-que-se-pondra-dificil-a-bloqueos-laliga-asi-se-activa-ech" target="_blank" rel="noopener noreferrer">Learn more →</a></div>
         </div>
     </div>
 
-    <!-- Requirements -->
+    <!-- REQUIREMENTS -->
+    <div class="section-label"><i class="fa fa-clipboard-check"></i> Requirements</div>
     <div class="content-card">
-        <h2><i class="fas fa-clipboard-check"></i> Requirements</h2>
-        <div class="alert alert-warning">
+        <div class="alert-strip alert-warning mb-3">
             <i class="fas fa-exclamation-triangle"></i>
             <div><strong>Important:</strong> Chrome must be updated to at least <strong>version 117</strong> or higher.</div>
         </div>
-        <div class="feature-list">
-            <ul>
-                <li><strong>Platform:</strong> Works on PC and mobile (Android/iOS)</li>
-                <li><strong>Browser:</strong> Google Chrome (latest version recommended)</li>
-                <li><strong>Time:</strong> 5–10 minutes</li>
-                <li><strong>Difficulty:</strong> Beginner-friendly</li>
-            </ul>
-        </div>
+        <ul class="guide-list">
+            <li><strong>Platform:</strong> Works on PC and mobile (Android/iOS)</li>
+            <li><strong>Browser:</strong> Google Chrome (latest version recommended)</li>
+            <li><strong>Time:</strong> 5–10 minutes</li>
+            <li><strong>Difficulty:</strong> Beginner-friendly</li>
+        </ul>
     </div>
 
-    <!-- Step-by-Step Guide -->
+    <!-- STEP BY STEP -->
+    <div class="section-label"><i class="fa fa-list-ol"></i> Step-by-Step Setup</div>
     <div class="content-card">
-        <h2><i class="fas fa-list-ol"></i> Step-by-Step Setup</h2>
 
         <!-- Step 1 -->
         <div class="step-card">
-            <div class="d-flex align-items-center flex-wrap">
+            <div class="step-header">
                 <span class="step-number">1</span>
                 <h3 class="step-title">Access Chrome Flags</h3>
             </div>
             <p>Type the following into Chrome's address bar and press Enter:</p>
             <div class="code-snippet">chrome://flags</div>
-            <p class="mt-2" style="color:var(--text-secondary);font-size:0.875rem;">This opens Chrome's experimental features panel.</p>
+            <p>This opens Chrome's experimental features panel.</p>
         </div>
 
         <!-- Step 2 -->
         <div class="step-card">
-            <div class="d-flex align-items-center flex-wrap">
+            <div class="step-header">
                 <span class="step-number">2</span>
                 <h3 class="step-title">Enable ECH Features</h3>
             </div>
             <p>Search for and enable both of these flags:</p>
-            <div class="feature-list">
-                <ul>
-                    <li><code>encrypted-client-hello</code></li>
-                    <li><code>use-dns-https-svcb-alpn</code></li>
-                </ul>
-            </div>
-            <p>Set each to <strong>"Enabled"</strong> using the dropdown.</p>
+            <ul class="guide-list">
+                <li><code>encrypted-client-hello</code></li>
+                <li><code>use-dns-https-svcb-alpn</code></li>
+            </ul>
+            <p class="mt-2">Set each to <strong>"Enabled"</strong> using the dropdown.</p>
         </div>
 
-        <!-- Video Guide -->
-        <div class="media-container">
-            <iframe height="380"
+        <!-- Video -->
+        <div class="media-wrap">
+            <iframe height="360"
                     src="https://www.youtube.com/embed/e5QccqXhaxQ"
                     title="Chrome ECH Setup Video Guide"
                     frameborder="0"
@@ -593,47 +457,41 @@
 
         <!-- Step 3 -->
         <div class="step-card">
-            <div class="d-flex align-items-center flex-wrap">
+            <div class="step-header">
                 <span class="step-number">3</span>
                 <h3 class="step-title">Open Security Settings</h3>
             </div>
             <p>Go to Chrome <strong>Settings → Privacy and Security → Security</strong></p>
         </div>
 
-        <!-- Screenshot gallery -->
-        <div class="image-gallery">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgw7JeUDKtJF6hZ919OCwpAhB1ftBVd2pRsv7dC_VHIsTgE3Wy1dVBBYTl_Ck6LH-LrUxMejTzmz-UsETbUhUBKE_Frd9fjfDJ9yZ1W_nmYU2JlwsQAfPn11g1IH7syeOCtZJsqnG4e0mH6iKo1_lSFeTg-s1pFP9JK7QMemRBCZndYicE-JOwyF1tNucKZ/s1600/1000128578.jpg"
-                 alt="Chrome Flags Configuration" title="Chrome Flags Setup">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOfqFY0SlRaoF8whiNLwiieOLjxqpfy6n-sdaTO_AwnQqgShsK_v95Svm0Rx02ZuErjbnbne-EnnUfqF50V2M9FYyJY9QLFcoXYW2TzMwmKxZYC7Dh17LD1T2hNo7Efm57ThBI2BxmxYghkxTwUJ4wn-rgYwE7rXVi18MtH7PJEevzTTDQSOKP1MU3fbeI/s1600/1000128580.jpg"
-                 alt="Chrome Privacy Settings" title="Privacy and Security Settings">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYBALSkfmuPuuRUaqcq1k8zKxA1z0eAkP0eOGfkG5lSmOa5Jh0ay9RSQBh3DZFPaXB96rBBQ6NLgWYRQWaPLjxKymB9e_gL-FhhkmhtKDmd7Tfno1aS4r7GmJ3aGGvTnb4HKCUPhjm1qWylpXt71NnPj_lFvEbORlXI_XKTk0O7qO1wVwjTtMfFhrYOodk/s1600/1000128582.jpg"
-                 alt="Chrome Security Section" title="Security Configuration">
+        <!-- Screenshots -->
+        <div class="img-grid">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgw7JeUDKtJF6hZ919OCwpAhB1ftBVd2pRsv7dC_VHIsTgE3Wy1dVBBYTl_Ck6LH-LrUxMejTzmz-UsETbUhUBKE_Frd9fjfDJ9yZ1W_nmYU2JlwsQAfPn11g1IH7syeOCtZJsqnG4e0mH6iKo1_lSFeTg-s1pFP9JK7QMemRBCZndYicE-JOwyF1tNucKZ/s1600/1000128578.jpg" alt="Chrome Flags Configuration">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjOfqFY0SlRaoF8whiNLwiieOLjxqpfy6n-sdaTO_AwnQqgShsK_v95Svm0Rx02ZuErjbnbne-EnnUfqF50V2M9FYyJY9QLFcoXYW2TzMwmKxZYC7Dh17LD1T2hNo7Efm57ThBI2BxmxYghkxTwUJ4wn-rgYwE7rXVi18MtH7PJEevzTTDQSOKP1MU3fbeI/s1600/1000128580.jpg" alt="Chrome Privacy Settings">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiYBALSkfmuPuuRUaqcq1k8zKxA1z0eAkP0eOGfkG5lSmOa5Jh0ay9RSQBh3DZFPaXB96rBBQ6NLgWYRQWaPLjxKymB9e_gL-FhhkmhtKDmd7Tfno1aS4r7GmJ3aGGvTnb4HKCUPhjm1qWylpXt71NnPj_lFvEbORlXI_XKTk0O7qO1wVwjTtMfFhrYOodk/s1600/1000128582.jpg" alt="Chrome Security Section">
         </div>
 
         <!-- Step 4 -->
         <div class="step-card">
-            <div class="d-flex align-items-center flex-wrap">
+            <div class="step-header">
                 <span class="step-number">4</span>
                 <h3 class="step-title">Enable Secure DNS</h3>
             </div>
             <p>In the Security section, turn on <strong>"Use secure DNS"</strong> and pick a provider:</p>
-            <div class="feature-list">
-                <ul>
-                    <li><strong>Cloudflare</strong> — Recommended for speed</li>
-                    <li><strong>Google</strong> — Alternative option</li>
-                </ul>
-            </div>
+            <ul class="guide-list">
+                <li><strong>Cloudflare</strong> — Recommended for speed</li>
+                <li><strong>Google</strong> — Alternative option</li>
+            </ul>
         </div>
 
         <!-- DNS screenshot -->
-        <div class="media-container">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEmzRuo-GGIMgU35tYYT1xviDCgGgaWsH8Te2m2mibkLCzD2cxJ3Nksz8HLbGbNJZORaSNAk3iDL3vNGU_PEGsSHXyVv34Emh4KY5z6jIy11nIEcW8rU7vIdO6I0OV0_KRv8UsDqURCPFFAIGwsH_AuFtmQWNyKiRSEErOaAjv4_4xUV79TXkZHG1HCINq/s1600/1000128584.jpg"
-                 alt="DNS Configuration" title="Secure DNS Setup">
+        <div class="media-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhEmzRuo-GGIMgU35tYYT1xviDCgGgaWsH8Te2m2mibkLCzD2cxJ3Nksz8HLbGbNJZORaSNAk3iDL3vNGU_PEGsSHXyVv34Emh4KY5z6jIy11nIEcW8rU7vIdO6I0OV0_KRv8UsDqURCPFFAIGwsH_AuFtmQWNyKiRSEErOaAjv4_4xUV79TXkZHG1HCINq/s1600/1000128584.jpg" alt="DNS Configuration">
         </div>
 
         <!-- Step 5 -->
         <div class="step-card">
-            <div class="d-flex align-items-center flex-wrap">
+            <div class="step-header">
                 <span class="step-number">5</span>
                 <h3 class="step-title">Restart Chrome</h3>
             </div>
@@ -641,67 +499,62 @@
         </div>
     </div>
 
-    <!-- Verification -->
+    <!-- VERIFICATION -->
+    <div class="section-label"><i class="fa fa-check-double" style="color:#4cbb6e"></i> Verification</div>
     <div class="content-card">
         <h2><i class="fas fa-check-double"></i> Verify Your Setup</h2>
-        <p>Confirm ECH is active by visiting the test page:</p>
-        <div class="text-center my-3">
-            <a href="https://tls-ech.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg">
+        <p style="color:var(--muted);font-size:0.875rem;margin-bottom:12px;">Confirm ECH is active by visiting the test page:</p>
+        <div class="text-center mb-3">
+            <a href="https://tls-ech.dev/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
                 <i class="fas fa-external-link-alt"></i> Test ECH Status
             </a>
         </div>
-        <p>You should see a confirmation that ECH is enabled:</p>
-        <div class="media-container">
-            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiN2mxGX9J-2Byb_2SwQD4atp2Fstb__fXffZBqet5z-rfxKbpJRkrhqZTztpoH0jLe1spl89UUVwdH06-qpm5ekRHmUXOTEJGiw2qqSt4bnfXKZXz7O9tCWj9mlLJFOS5w4nYN6DJ3Xy0uILMGCo3477OksWHKus0CujXmV8PNr31JMNqmLVjh14HOqUZZ/s1600/1000128588.jpg"
-                 alt="ECH Test Results" title="Successful ECH Configuration">
+        <p style="color:var(--muted);font-size:0.875rem;margin-bottom:10px;">You should see a confirmation that ECH is enabled:</p>
+        <div class="media-wrap">
+            <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiN2mxGX9J-2Byb_2SwQD4atp2Fstb__fXffZBqet5z-rfxKbpJRkrhqZTztpoH0jLe1spl89UUVwdH06-qpm5ekRHmUXOTEJGiw2qqSt4bnfXKZXz7O9tCWj9mlLJFOS5w4nYN6DJ3Xy0uILMGCo3477OksWHKus0CujXmV8PNr31JMNqmLVjh14HOqUZZ/s1600/1000128588.jpg" alt="ECH Test Results">
         </div>
     </div>
 
-    <!-- Benefits -->
+    <!-- BENEFITS -->
+    <div class="section-label"><i class="fa fa-star" style="color:#e3b341"></i> Benefits</div>
     <div class="content-card">
         <h2><i class="fas fa-star"></i> Additional Benefits</h2>
-        <div class="alert alert-success">
+        <div class="alert-strip alert-success mb-3">
             <i class="fas fa-globe"></i>
-            <div><strong>Universal Access:</strong> This setup works beyond cineby — it unblocks any site your ISP was restricting. 🌍</div>
+            <div><strong>Universal Access:</strong> This setup works beyond Cineby — it unblocks any site your ISP was restricting. 🌍</div>
         </div>
-        <div class="feature-list">
-            <ul>
-                <li><strong>Enhanced Privacy:</strong> Your browsing activity is better protected from snooping</li>
-                <li><strong>Improved Security:</strong> ECH encrypts connection metadata at the TLS layer</li>
-                <li><strong>Bypass Censorship:</strong> Access geo-restricted and ISP-blocked content freely</li>
-                <li><strong>No Performance Impact:</strong> ECH and Secure DNS have negligible effect on speed — faster resolvers may even improve it</li>
-            </ul>
-        </div>
+        <ul class="guide-list">
+            <li><strong>Enhanced Privacy:</strong> Your browsing activity is better protected from snooping</li>
+            <li><strong>Improved Security:</strong> ECH encrypts connection metadata at the TLS layer</li>
+            <li><strong>Bypass Censorship:</strong> Access geo-restricted and ISP-blocked content freely</li>
+            <li><strong>No Performance Impact:</strong> ECH and Secure DNS have negligible effect on speed</li>
+        </ul>
     </div>
 
-    <!-- Troubleshooting -->
+    <!-- TROUBLESHOOTING -->
+    <div class="section-label"><i class="fa fa-tools"></i> Troubleshooting</div>
     <div class="content-card">
         <h2><i class="fas fa-tools"></i> Troubleshooting</h2>
-        <div class="feature-list">
-            <ul>
-                <li><strong>Still blocked?</strong> Clear Chrome's cache and retry in an Incognito window.</li>
-                <li><strong>Flags not visible?</strong> Make sure Chrome is up to date — some Canary/Nightly builds behave differently.</li>
-                <li><strong>ECH test shows disabled?</strong> Switch DNS provider (Cloudflare ↔ Google) then retest at <a href="https://tls-ech.dev/" target="_blank" rel="noopener noreferrer">tls-ech.dev</a>.</li>
-                <li><strong>Mobile issues?</strong> Ensure Android/iOS Chrome has the latest system update; some platform builds lag behind desktop support.</li>
-            </ul>
-        </div>
+        <ul class="guide-list">
+            <li><strong>Still blocked?</strong> Clear Chrome's cache and retry in an Incognito window.</li>
+            <li><strong>Flags not visible?</strong> Make sure Chrome is up to date — some builds behave differently.</li>
+            <li><strong>ECH test shows disabled?</strong> Switch DNS provider (Cloudflare ↔ Google) then retest at <a href="https://tls-ech.dev/" target="_blank" rel="noopener noreferrer">tls-ech.dev</a>.</li>
+            <li><strong>Mobile issues?</strong> Ensure Android/iOS Chrome has the latest system update; some builds lag behind desktop.</li>
+        </ul>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="signature">Cineby</div>
-        <div class="tagline">Stream freely. Browse safely.</div>
-        <div class="copyright">© <span id="currentYear"></span> Cineby — Built with care for privacy and access.</div>
-    </footer>
+    <!-- FOOTER -->
+    <div class="site-footer">
+        © <span id="currentYear"></span> Cineby — Stream freely. Browse safely.
+    </div>
 
-</div><!-- /.container -->
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
 <script>
-    // Year
     document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-    // Copy buttons for .code-snippet
     document.querySelectorAll('.code-snippet').forEach(snippet => {
         const btn = document.createElement('button');
         btn.type = 'button';
@@ -710,13 +563,11 @@
         snippet.appendChild(btn);
 
         btn.addEventListener('click', async () => {
-            // Get text without the button label
             const text = (snippet.innerText || '').replace(/\s*Copy\s*$/, '').trim();
             try {
                 await navigator.clipboard.writeText(text);
                 btn.innerHTML = '<i class="fas fa-check"></i> Copied!';
             } catch {
-                // Fallback
                 const sel = window.getSelection();
                 const range = document.createRange();
                 range.selectNodeContents(snippet);
@@ -729,16 +580,32 @@
             setTimeout(() => btn.innerHTML = '<i class="fas fa-copy"></i> Copy', 2000);
         });
     });
-
-    // Skip link focus behaviour
-    const skip = document.getElementById('skip-link');
-    if (skip) {
-        skip.addEventListener('focus', () => { skip.style.left = '0'; });
-        skip.addEventListener('blur',  () => { skip.style.left = '-9999px'; });
-    }
 </script>
+
 <center><script async="async" data-cfasync="false" src="https://crowdsynonym.com/e9c7d8b42f4a2c459272c72d1fd8806e/invoke.js"></script>
-<div id="container-e9c7d8b42f4a2c459272c72d1fd8806e"></div>
-</center>
+<div id="container-e9c7d8b42f4a2c459272c72d1fd8806e"></div></center>
+
+
+<!-- Floating Banner Ad -->
+<div id="floating-banner" style="position:fixed; bottom:0; left:0; width:100%; z-index:10000; text-align:center;">
+  <a href="https://crowdsynonym.com/tth2ujj3?key=baa5c00e2caf22f4ceb809c79bf68a65"
+     target="_blank"
+     onclick="document.getElementById('floating-banner').style.display='none';"
+     style="display:block; text-align:right; max-width:320px; margin:0 auto 2px; cursor:pointer;">
+    <img src="https://www.freeiconspng.com/uploads/blue-close-button-png-7.png" width="20" alt="close" />
+  </a>
+  <div style="max-width:320px; margin:0 auto;">
+    <script>
+      atOptions = {
+        'key' : '432208a4b61ab681c09ab68fe06004de',
+        'format' : 'iframe',
+        'height' : 50,
+        'width' : 320,
+        'params' : {}
+      };
+    </script>
+    <script src="https://crowdsynonym.com/432208a4b61ab681c09ab68fe06004de/invoke.js"></script>
+  </div>
+</div>
 </body>
 </html>
